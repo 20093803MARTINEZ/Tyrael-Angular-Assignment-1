@@ -1,0 +1,35 @@
+<div class = 'container'>
+  <h1>{{ title }}</h1>
+  <h2>Welcome to My Student Tracker!</h2>
+
+
+<div class = 'section'>
+  <h3>👤 Student Information</h3>
+  <p><strong>Name: </strong>{{ studentInfo.name }}</p>
+  <p><strong>Age: </strong>{{ studentInfo.age }}</p>
+  <p><strong>Course: </strong>{{ studentInfo.course }}</p>
+</div>
+
+<div class = 'section'>
+  <h3>
+    🚀 Skills I'm Learning
+  </h3>
+  <ul style="list-style: none;">
+    <li *ngFor="let skill of skills">✓ {{ skill }}</li>
+  </ul>
+</div>
+
+<button (click)="addSkill()" style = "padding: 10px 20px; font-size: 16px">
+  Add New Skill
+</button>
+
+<div class="section">
+  <h3>📝 Learning Journey</h3>
+  <div class="journey-content">
+    <p class="journey-text">🎯 <strong>Current Focus:</strong> Building my first Angular application</p>
+    <p class="journey-text">💪 <strong>Skills Mastered:</strong> {{ skills.length }} and counting!</p>
+    <p class="journey-text">🔥 <strong>Next Goal:</strong> Master Angular components and data binding</p>
+  </div>
+</div>
+
+</div>
